@@ -39,6 +39,6 @@ app.use((error, req, res, next) => {
 
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log("Server is listening at port "+ port);
 });
