@@ -30,6 +30,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(routes);
 
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
 
 
 app.use((error, req, res, next) => {
